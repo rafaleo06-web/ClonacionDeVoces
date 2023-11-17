@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="start_sesion">Inicio de sesión</string>
+    <string name="remember_password">Recordar</string>
+</resources>

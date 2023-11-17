@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/logInFragment">
+
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="dev.brianchuquiruna.clonaciondevoces.LogInFragment"
+        android:label="fragment_log_in"
+        tools:layout="@layout/fragment_log_in" >
+        <action
+            android:id="@+id/action_logInFragment_to_studyHallFragment"
+            app:destination="@id/studyHallFragment" />
+        <action
+            android:id="@+id/action_logInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_logInFragment_to_principalParentsFragment"
+            app:destination="@id/principalParentsFragment" />
+        <action
+            android:id="@+id/action_logInFragment_to_allLearningSesionsFragment"
+            app:destination="@id/allLearningSesionsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cloneVoiceFragment"
+        android:name="dev.brianchuquiruna.clonaciondevoces.CloneVoiceFragment"
+        android:label="fragment_clone_voice"
+        tools:layout="@layout/fragment_clone_voice" >
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <argument
+            android:name="idSession"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/studyHallFragment"
+        android:name="dev.brianchuquiruna.clonaciondevoces.studyhall.StudyHallFragment"
+        android:label="fragment_study_hall"
+        tools:layout="@layout/fragment_study_hall" >
+        <action
+            android:id="@+id/action_studyHallFragment_to_chooseOptionFragment"
+            app:destination="@id/chooseOptionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseOptionFragment"
+        android:name="dev.brianchuquiruna.clonaciondevoces.ChooseOptionFragment"
+        android:label="fragment_choose_option"
+        tools:layout="@layout/fragment_choose_option" >
+        <action
+            android:id="@+id/action_chooseOptionFragment_to_learningFragment"
+            app:destination="@id/learningFragment" />
+        <action
+            android:id="@+id/action_chooseOptionFragment_to_allLearningSesionsFragment"
+            app:destination="@id/allLearningSesionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/learningFragment"
+        android:name="dev.brianchuquiruna.clonaciondevoces.learning.LearningFragment"
+        android:label="fragment_learning"
+        tools:layout="@layout/fragment_learning" />
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="dev.brianchuquiruna.clonaciondevoces.signup.SignUpFragment"
+        android:label="SignUpFragment" >
+        <action
+            android:id="@+id/action_signUpFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
+        <action
+            android:id="@+id/action_signUpFragment_to_studyHallFragment"
+            app:destination="@id/studyHallFragment" />
+        <action
+            android:id="@+id/action_signUpFragment_to_principalParentsFragment"
+            app:destination="@id/principalParentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/principalParentsFragment"
+        android:name="dev.brianchuquiruna.clonaciondevoces.parents.PrincipalParentsFragment"
+        android:label="fragment_principal_parents"
+        tools:layout="@layout/fragment_principal_parents" >
+        <action
+            android:id="@+id/action_principalParentsFragment_to_loadArchivesFragment"
+            app:destination="@id/loadArchivesFragment" />
+        <action
+            android:id="@+id/action_principalParentsFragment_to_learningFragment"
+            app:destination="@id/learningFragment" />
+        <action
+            android:id="@+id/action_principalParentsFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loadArchivesFragment"
+        android:name="dev.brianchuquiruna.clonaciondevoces.parents.loadarchives.LoadArchivesFragment"
+        android:label="fragment_load_archives"
+        tools:layout="@layout/fragment_load_archives" />
+    <fragment
+        android:id="@+id/allLearningSesionsFragment"
+        android:name="dev.brianchuquiruna.clonaciondevoces.alllearningsesions.AllLearningSesionsFragment"
+        android:label="fragment_all_learning_sesions"
+        tools:layout="@layout/fragment_all_learning_sesions" >
+        <action
+            android:id="@+id/action_allLearningSesionsFragment_to_onlyOneSessionFragment"
+            app:destination="@id/onlyOneSessionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onlyOneSessionFragment"
+        android:name="dev.brianchuquiruna.clonaciondevoces.onlyonesession.OnlyOneSessionFragment"
+        android:label="fragment_only_one_session"
+        tools:layout="@layout/fragment_only_one_session" >
+        <action
+            android:id="@+id/action_onlyOneSessionFragment_to_cloneVoiceFragment"
+            app:destination="@id/cloneVoiceFragment" />
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <argument
+            android:name="titleSesion"
+            app:argType="string"
+            android:defaultValue="Desconocido" />
+        <argument
+            android:name="idSession"
+            app:argType="string" />
+    </fragment>
+</navigation>

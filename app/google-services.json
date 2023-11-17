@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "872478708477",
+    "project_id": "clonevoiceapp",
+    "storage_bucket": "clonevoiceapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:872478708477:android:5b6f4a8676874d5e19e494",
+        "android_client_info": {
+          "package_name": "dev.brianchuquiruna.clonaciondevoces"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaAS7WaIIn65WJLILzsyEJh4DgiMcsssM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CloneVoiceFragment">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="APRENDER"/>
+
+    <TextView
+        android:id="@+id/tvVoice"
+        android:layout_marginTop="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voz"/>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/style_border_textview"
+        android:layout_width="match_parent"
+        android:textColor="@color/gray"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:id="@+id/tvWriteText"
+        android:layout_marginTop="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escribir texto"/>
+
+    <EditText
+        android:id="@+id/etSpeech"
+        android:layout_marginTop="16dp"
+        android:hint="Ingrese texto"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:layout_marginBottom="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <LinearLayout
+        android:id="@+id/layoutAudio"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp">
+        <Button
+            android:layout_weight="2"
+            android:id="@+id/btnGenerateAudio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Generar audio"/>
+        <ImageButton
+            android:id="@+id/btnPlayAudio"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_play_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSaveAudio"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/green"
+        android:text="Guardar audio"/>
+
+</LinearLayout>
